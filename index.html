@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>College Digital Notice Board</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- LOGIN PAGE -->
+    <div id="loginSection" class="container">
+
+        <div class="login-box">
+
+            <h1>College Digital Notice Board</h1>
+
+            <p class="subtitle">
+                Cloud-Based Notice Management System
+            </p>
+
+            <h2>Student Login</h2>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter Email"
+            >
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter Password"
+            >
+
+            <button onclick="login()">Login</button>
+
+            <button onclick="register()" class="register-btn">
+                Create Account
+            </button>
+
+            <p id="message"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- NOTICE BOARD -->
+    <div id="noticeSection" class="hidden">
+
+        <header>
+
+            <div>
+                <h1>College Digital Notice Board</h1>
+                <p>Cloud-Based Notice Management System</p>
+            </div>
+
+            <button onclick="logout()" class="logout-btn">
+                Logout
+            </button>
+
+        </header>
+
+
+        <main>
+
+            <h2 class="section-title">Latest Notices</h2>
+
+            <div id="noticeList">
+                <p>Loading notices...</p>
+            </div>
+
+
+            <!-- ADD NOTICE -->
+            <div class="notice-form">
+
+                <h2>Add New Notice</h2>
+
+                <input
+                    type="text"
+                    id="noticeTitle"
+                    placeholder="Notice Title"
+                >
+
+                <textarea
+                    id="noticeDescription"
+                    placeholder="Notice Description"
+                ></textarea>
+
+                <input
+                    type="text"
+                    id="noticeDepartment"
+                    placeholder="Department"
+                >
+
+                <input
+                    type="date"
+                    id="noticeDate"
+                >
+
+                <label class="important-label">
+                    <input type="checkbox" id="important">
+                    Important Notice
+                </label>
+
+                <button onclick="addNotice()">
+                    Add Notice
+                </button>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
